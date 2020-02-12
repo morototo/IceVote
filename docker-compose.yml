@@ -7,14 +7,14 @@ services:
       - ./server:/app/server
     ports:
       - "3020:3000"
-    environment:
-      - DATABASE_URL=postgres://postgres:servers@db:5432/servers
     depends_on:
       - db
   db:
     image: mysql:8.0
     environment:
+      MYSQL_DATABASE: server_development
       MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: root
     ports:
       - '3306:3306'
     command: --default-authentication-plugin=mysql_native_password
