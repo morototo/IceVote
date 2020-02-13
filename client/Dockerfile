@@ -8,3 +8,4 @@ ENV PATH /app/client/node_modules/.bin:$PATH
 COPY package.json /app/client/package.json
 RUN npm install --silent
 RUN npm install react-scripts@1.1.1 -g --silent
+RUN npm install @material-ui/core
