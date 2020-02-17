@@ -9,26 +9,14 @@ import {
 
 import SignIn from './pages/sign_in/sign_in'
 import SignUp from './pages/sign_up/sign_up'
+import Home from './pages/home/home'
+import Header from './common/header'
 
 const isAuthenticated = true
 
 const App = () => (
   <div className="App">
-  <Router>
-    <div>
-      <ul>
-        <li><Link to="/signin">SingIn</Link></li>
-        <li><Link to="/signup">SingUp</Link></li>
-      </ul>
-
-      <hr/>
-
-      <Switch>
-        <Route exact path="/signin" render={props => (<SignIn {...props}/>) }/>
-        <Route exact path="/signUp" render={props => (<SignUp {...props}/>) }/>
-      </Switch>
-    </div>
-  </Router>
+  <Header />
 </div>
 )
 
